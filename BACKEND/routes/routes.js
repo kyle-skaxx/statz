@@ -6,7 +6,7 @@ router.post('/sales-interactions', (req, res) => {
     .insert({
       house_number: req.body.house_number,
       street_address: req.body.street_address,
-      stage: req.body.stage, // the "stage" field is now an array of strings
+      stage: req.body.stage,
     })
     .then(() => res.sendStatus(201))
     .catch((error) => res.status(500).json({ error }))
